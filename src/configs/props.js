@@ -49,7 +49,7 @@ export default {
   imageControls: [
     'float-left', 'float-right',
     'align-left', 'align-center', 'align-right',
-    'link', 'size', 'remove'
+    'link', 'size', 'remove', 'caption'
   ],
   colors: [
     '#000000', '#333333', '#666666', '#999999', '#cccccc', '#ffffff',

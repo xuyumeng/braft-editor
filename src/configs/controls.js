@@ -190,5 +190,9 @@ export const imageControlItems = {
   'remove': {
     text: <span>&#xe9ac;</span>,
     command: 'removeImage'
+  },
+  'caption': {
+    text: <span>Caption</span>,
+    command: 'toggleCaptionEditor'
   }
 }

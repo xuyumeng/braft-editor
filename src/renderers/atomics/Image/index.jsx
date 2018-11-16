@@ -11,20 +11,22 @@ export default class Image extends React.Component {
     toolbarOffset: 0,
     linkEditorVisible: false,
     sizeEditorVisible: false,
+    captionEditorVisible: false,
     tempLink: null,
     tempWidth: null,
-    tempHeight: null
+    tempHeight: null,
+    tempCaption: null
   }
 
   render () {
 
     const { mediaData, language, imageControls } = this.props
-    const { toolbarVisible, toolbarOffset, linkEditorVisible, sizeEditorVisible } = this.state
+    const { toolbarVisible, toolbarOffset, linkEditorVisible, sizeEditorVisible, captionEditorVisible } = this.state
     const blockData = this.props.block.getData()
 
     let float = blockData.get('float')
     let alignment = blockData.get('alignment')
-    let { url, link, link_target, width, height, meta } = mediaData
+    let { url, link, link_target, width, height, meta, caption } = mediaData
     let imageStyles = {}
     let clearFix = false
 
@@ -62,7 +64,7 @@ export default class Image extends React.Component {
     return (
       <div className='bf-media'>
         <div
-          style={imageStyles}
+          style={{...imageStyles, width}}
           draggable={true}
           onMouseEnter={this.showToolbar}
           onMouseMove={this.showToolbar}
@@ -104,6 +106,14 @@ export default class Image extends React.Component {
                   </div>
                 </div>
               ) : null}
+              {captionEditorVisible? (
+                <div className='bf-image-size-editor'>
+                  <div className='editor-input-group'>
+                    <input type='text' placeholder={'Caption'} onKeyDown={this.handleCaptionInputKeyDown} onChange={this.setImageCaption} defaultValue={caption}/>
+                    <button type='button' onClick={this.confirmImageCaption}>{language.base.confirm}</button>
+                  </div>
+                </div>
+              ) : null}
               {renderedControlItems}
               <i style={{marginLeft: toolbarOffset * -1}} className='bf-media-toolbar-arrow'></i>
             </div>
@@ -111,10 +121,11 @@ export default class Image extends React.Component {
           <img
             ref={instance => this.imageElement = instance}
             src={url}
-            width={width}
+            width={'100%'}
             height={height}
             {...meta}
           />
+          {caption? <span style={{color: 'rgb(102, 102, 102)', fontSize: '12px'}}>{caption}</span>: null }
         </div>
         {clearFix && <div className='clearfix' style={{clear:'both',height:0,lineHeight:0,float:'none'}}></div>}
       </div>
@@ -201,14 +212,24 @@ export default class Image extends React.Component {
   toggleLinkEditor = () => {
     this.setState({
       linkEditorVisible: !this.state.linkEditorVisible,
-      sizeEditorVisible: false
+      sizeEditorVisible: false,
+      captionEditorVisible: false
     })
   }
 
   toggleSizeEditor = () => {
     this.setState({
       linkEditorVisible: false,
-      sizeEditorVisible: !this.state.sizeEditorVisible
+      sizeEditorVisible: !this.state.sizeEditorVisible,
+      captionEditorVisible: false
+    })
+  }
+
+  toggleCaptionEditor = () => {
+    this.setState({
+      linkEditorVisible: false,
+      sizeEditorVisible: false,
+      captionEditorVisible: !this.state.captionEditorVisible
     })
   }
 
@@ -293,6 +314,32 @@ export default class Image extends React.Component {
     this.props.editor.setValue(ContentUtils.setMediaData(this.props.editorState, this.props.entityKey, newImageSize))
     window.setImmediate(this.props.editor.forceRender)
 
+  }
+
+  handleCaptionInputKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      this.confirmImageCaption()
+    } else {
+      return
+    }
+  }
+
+  setImageCaption = ({ currentTarget }) => {
+
+    let { value } = currentTarget
+
+    this.setState({
+      tempCaption: value
+    })
+
+    return
+  }
+
+  confirmImageCaption = () => {
+    const { tempCaption: caption } = this.state
+
+    this.props.editor.setValue(ContentUtils.setMediaData(this.props.editorState, this.props.entityKey, { caption }))
+    window.setImmediate(this.props.editor.forceRender)
   }
 
   setImageFloat = (float) => {
