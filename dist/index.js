@@ -143,94 +143,6 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__3__;
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(16);
-
-var assertThisInitialized = __webpack_require__(1);
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(23);
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-
-/***/ }),
-/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var defineProperty = __webpack_require__(2);
@@ -255,6 +167,94 @@ function _objectSpread(target) {
 }
 
 module.exports = _objectSpread;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+module.exports = _classCallCheck;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+module.exports = _createClass;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(16);
+
+var assertThisInitialized = __webpack_require__(1);
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return assertThisInitialized(self);
+}
+
+module.exports = _possibleConstructorReturn;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+module.exports = _getPrototypeOf;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var setPrototypeOf = __webpack_require__(23);
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) setPrototypeOf(subClass, superClass);
+}
+
+module.exports = _inherits;
 
 /***/ }),
 /* 10 */
@@ -624,7 +624,7 @@ var helpers_typeof = __webpack_require__(16);
 var typeof_default = /*#__PURE__*/__webpack_require__.n(helpers_typeof);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/objectSpread.js
-var objectSpread = __webpack_require__(9);
+var objectSpread = __webpack_require__(4);
 var objectSpread_default = /*#__PURE__*/__webpack_require__.n(objectSpread);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/objectWithoutProperties.js
@@ -632,23 +632,23 @@ var objectWithoutProperties = __webpack_require__(19);
 var objectWithoutProperties_default = /*#__PURE__*/__webpack_require__.n(objectWithoutProperties);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/classCallCheck.js
-var classCallCheck = __webpack_require__(4);
+var classCallCheck = __webpack_require__(5);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/createClass.js
-var createClass = __webpack_require__(5);
+var createClass = __webpack_require__(6);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js
-var possibleConstructorReturn = __webpack_require__(6);
+var possibleConstructorReturn = __webpack_require__(7);
 var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/getPrototypeOf.js
-var getPrototypeOf = __webpack_require__(7);
+var getPrototypeOf = __webpack_require__(8);
 var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/inherits.js
-var inherits = __webpack_require__(8);
+var inherits = __webpack_require__(9);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/assertThisInitialized.js
@@ -1054,7 +1054,7 @@ var external_immutable_default = /*#__PURE__*/__webpack_require__.n(external_imm
       embed: true
     }
   },
-  imageControls: ['float-left', 'float-right', 'align-left', 'align-center', 'align-right', 'link', 'size', 'remove'],
+  imageControls: ['float-left', 'float-right', 'align-left', 'align-center', 'align-right', 'link', 'size', 'remove', 'caption'],
   colors: ['#000000', '#333333', '#666666', '#999999', '#cccccc', '#ffffff', '#61a951', '#16a085', '#07a9fe', '#003ba5', '#8e44ad', '#f32784', '#c0392b', '#d35400', '#f39c12', '#fdda00'],
   colorPicker: null,
   colorPickerTheme: 'dark',
@@ -1959,6 +1959,10 @@ var imageControlItems = {
   'remove': {
     text: external_react_default.a.createElement("span", null, "\uE9AC"),
     command: 'removeImage'
+  },
+  'caption': {
+    text: external_react_default.a.createElement("span", null, "Caption"),
+    command: 'toggleCaptionEditor'
   }
 };
 // CONCATENATED MODULE: ./renderers/atomics/Image/index.jsx
@@ -2001,9 +2005,11 @@ function (_React$Component) {
       toolbarOffset: 0,
       linkEditorVisible: false,
       sizeEditorVisible: false,
+      captionEditorVisible: false,
       tempLink: null,
       tempWidth: null,
-      tempHeight: null
+      tempHeight: null,
+      tempCaption: null
     });
 
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "handleDragStart", function () {
@@ -2054,14 +2060,24 @@ function (_React$Component) {
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "toggleLinkEditor", function () {
       _this.setState({
         linkEditorVisible: !_this.state.linkEditorVisible,
-        sizeEditorVisible: false
+        sizeEditorVisible: false,
+        captionEditorVisible: false
       });
     });
 
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "toggleSizeEditor", function () {
       _this.setState({
         linkEditorVisible: false,
-        sizeEditorVisible: !_this.state.sizeEditorVisible
+        sizeEditorVisible: !_this.state.sizeEditorVisible,
+        captionEditorVisible: false
+      });
+    });
+
+    defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "toggleCaptionEditor", function () {
+      _this.setState({
+        linkEditorVisible: false,
+        sizeEditorVisible: false,
+        captionEditorVisible: !_this.state.captionEditorVisible
       });
     });
 
@@ -2138,6 +2154,35 @@ function (_React$Component) {
       window.setImmediate(_this.props.editor.forceRender);
     });
 
+    defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "handleCaptionInputKeyDown", function (e) {
+      if (e.keyCode === 13) {
+        _this.confirmImageCaption();
+      } else {
+        return;
+      }
+    });
+
+    defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "setImageCaption", function (_ref3) {
+      var currentTarget = _ref3.currentTarget;
+      var value = currentTarget.value;
+
+      _this.setState({
+        tempCaption: value
+      });
+
+      return;
+    });
+
+    defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "confirmImageCaption", function () {
+      var caption = _this.state.tempCaption;
+
+      _this.props.editor.setValue(external_braft_utils_["ContentUtils"].setMediaData(_this.props.editorState, _this.props.entityKey, {
+        caption: caption
+      }));
+
+      window.setImmediate(_this.props.editor.forceRender);
+    });
+
     defineProperty_default()(assertThisInitialized_default()(assertThisInitialized_default()(_this)), "setImageFloat", function (float) {
       _this.props.editor.setValue(external_braft_utils_["ContentUtils"].setMediaPosition(_this.props.editorState, _this.props.block, {
         float: float
@@ -2202,7 +2247,8 @@ function (_React$Component) {
           toolbarVisible = _this$state2.toolbarVisible,
           toolbarOffset = _this$state2.toolbarOffset,
           linkEditorVisible = _this$state2.linkEditorVisible,
-          sizeEditorVisible = _this$state2.sizeEditorVisible;
+          sizeEditorVisible = _this$state2.sizeEditorVisible,
+          captionEditorVisible = _this$state2.captionEditorVisible;
       var blockData = this.props.block.getData();
       var float = blockData.get('float');
       var alignment = blockData.get('alignment');
@@ -2211,7 +2257,8 @@ function (_React$Component) {
           link_target = mediaData.link_target,
           width = mediaData.width,
           height = mediaData.height,
-          meta = mediaData.meta;
+          meta = mediaData.meta,
+          caption = mediaData.caption;
       var imageStyles = {};
       var clearFix = false;
 
@@ -2255,7 +2302,9 @@ function (_React$Component) {
       return external_react_default.a.createElement("div", {
         className: "bf-media"
       }, external_react_default.a.createElement("div", {
-        style: imageStyles,
+        style: objectSpread_default()({}, imageStyles, {
+          width: width
+        }),
         draggable: true,
         onMouseEnter: this.showToolbar,
         onMouseMove: this.showToolbar,
@@ -2315,6 +2364,19 @@ function (_React$Component) {
       }), external_react_default.a.createElement("button", {
         type: "button",
         onClick: this.confirmImageSize
+      }, language.base.confirm))) : null, captionEditorVisible ? external_react_default.a.createElement("div", {
+        className: "bf-image-size-editor"
+      }, external_react_default.a.createElement("div", {
+        className: "editor-input-group"
+      }, external_react_default.a.createElement("input", {
+        type: "text",
+        placeholder: 'Caption',
+        onKeyDown: this.handleCaptionInputKeyDown,
+        onChange: this.setImageCaption,
+        defaultValue: caption
+      }), external_react_default.a.createElement("button", {
+        type: "button",
+        onClick: this.confirmImageCaption
       }, language.base.confirm))) : null, renderedControlItems, external_react_default.a.createElement("i", {
         style: {
           marginLeft: toolbarOffset * -1
@@ -2325,9 +2387,14 @@ function (_React$Component) {
           return _this2.imageElement = instance;
         },
         src: url,
-        width: width,
+        width: '100%',
         height: height
-      }, meta))), clearFix && external_react_default.a.createElement("div", {
+      }, meta)), caption ? external_react_default.a.createElement("span", {
+        style: {
+          color: 'rgb(102, 102, 102)',
+          fontSize: '12px'
+        }
+      }, caption) : null), clearFix && external_react_default.a.createElement("div", {
         className: "clearfix",
         style: {
           clear: 'both',
